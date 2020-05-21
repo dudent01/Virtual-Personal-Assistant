@@ -11,7 +11,7 @@ def assistant_speaks(output):
 
     # Global value is updated to ensure that all unique files are named uniquely
     num += 1
-    print("Person: " + output)
+    print("Assistant: " + output)
 
     ''' Could be further improved to allow slow speech if prompted to repeat'''
     toSpeak = gTTS(text=output, lang='en', slow=False)
@@ -107,12 +107,13 @@ def search_web(input):
         assistant_speaks("Opening in youtube")
         indx = input.lower().split().index('youtube')
         query = input.split()[indx + 1:]
-        driver.get("http://www.youtube.com/results?search_query =" + '+'.join(query))
+        print("http://www.youtube.com/results?search_query=" + '+'.join(query))
+        driver.get("http://www.youtube.com/results?search_query=" + '+'.join(query))
         return
 
     elif 'wikipedia' in input.lower():
 
-        assistant_speaks("Opening Wikipedia")
+        assistant_speaks("Opening in Wikipedia")
         indx = input.lower().split().index('wikipedia')
         query = input.split()[indx + 1:]
         driver.get("https://en.wikipedia.org/wiki/" + '_'.join(query))
@@ -120,21 +121,21 @@ def search_web(input):
 
     else:
 
-        if 'google' in input:
-
+        if 'google' in input.lower():
+            assistant_speaks("Opening with Google")
             indx = input.lower().split().index('google')
             query = input.split()[indx + 1:]
-            driver.get("https://www.google.com/search?q =" + '+'.join(query))
+            driver.get("https://www.google.com/search?q=" + '+'.join(query))
 
-        elif 'search' in input:
-
+        elif 'search' in input.lower():
+            assistant_speaks("Opening with Google")
             indx = input.lower().split().index('google')
             query = input.split()[indx + 1:]
-            driver.get("https://www.google.com/search?q =" + '+'.join(query))
+            driver.get("https://www.google.com/search?q=" + '+'.join(query))
 
         else:
 
-            driver.get("https://www.google.com/search?q =" + '+'.join(input.split()))
+            driver.get("https://www.google.com/search?q=" + '+'.join(input.split()))
 
         return
 
@@ -182,7 +183,7 @@ def process_text(input):
 
         else:
 
-            assistant_speaks("I can search the web for you, Do you want to continue?")
+            assistant_speaks("I can search the web for you for " + str(input) + ", Do you want to continue?")
             ans = get_audio()
             if 'yes' in str(ans) or 'yeah' in str(ans):
                 search_web(input)
