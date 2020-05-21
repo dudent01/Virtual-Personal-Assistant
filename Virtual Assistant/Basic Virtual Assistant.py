@@ -203,7 +203,7 @@ def process_text(input):
             else:
                 pass
 
-        elif 'current weather' in input.lower():
+        elif 'current weather in' in input.lower():
             reg_ex = re.search('current weather in (.*)', input)
             if reg_ex:
                 try:
