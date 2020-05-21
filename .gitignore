@@ -1,2 +1,5 @@
 ECHO is on.
-**/.idea
+
+**/workspace.xml
+**/tasks.xml
+**/*.iws
