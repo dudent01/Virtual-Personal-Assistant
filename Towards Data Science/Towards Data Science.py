@@ -19,6 +19,7 @@ import random
 from time import strftime
 
 from gtts import gTTS
+import playsound
 
 def myCommand():
     r = sr.Recognizer()
@@ -55,4 +56,19 @@ def sofiaResponse(output):
     playsound.playsound(file, True)
     os.remove(file)
 
-sofiaResponse(myCommand())
+#sofiaResponse(myCommand())             # This is an echo
+
+def assistant(command):
+    if 'open' in command:
+        reg_ex = re.search('open (.+)', command)
+        if reg_ex:
+            domain = reg_ex.group(1)
+            print(domain)
+            url = 'https://www.' + domain
+            webbrowser.open(url)
+            sofiaResponse('The website you have requested has been opened for you Sir.')
+        else:
+            pass
+
+while True:
+    assistant(myCommand())
