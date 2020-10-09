@@ -3,7 +3,7 @@
 #### Current functionality:
 
 1. If told to '**search youtube <query>**', it will open a remote controlled firefox window with the search in youtube.
-The youtube search also happens when told to 'play <query>'.
+The youtube search also happens when told to '**play <query>**'.
 The same works for wikipedia (but it will not respond to 'play').
 To open the search in Google, either 'search google <query>, or simply 'search <query>'.
    
