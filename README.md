@@ -29,7 +29,7 @@ Handles the case when the prompted location is not a city.
    
 8. If asked for '**news**' or '**news for today**', the headings of the top 15 news articles from Google's RSS feed are read.
    
-9. When asked to '**tell me about SOMETHING**', the first 1000 characters of the associated Wikipedia article are read.
+9. When asked to '**tell me about SOMETHING**', the first 1000 characters of the associated Wikipedia article are read (the last sentence is finished).
    
 10. If the prompt cannot be interpreted as above, then the assistant offers to search for it on Google.
    
