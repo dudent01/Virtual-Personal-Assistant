@@ -1,5 +1,10 @@
 ### Virtual Personal Assistant
 
+#### Interacting with the program
+
+Run the Basic Virtual Assistant script inside the Virtual Assistant directory.
+Communicate with the script by clearly speaking with the machine.
+
 #### Current functionality:
 
 1. If told to '**search youtube SOMETHING**', it will open a remote controlled firefox window with the search in youtube.
