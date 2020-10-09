@@ -2,7 +2,7 @@
 
 #### Interacting with the program
 
-Run the Basic Virtual Assistant script inside the Virtual Assistant directory.
+Run the Basic Virtual Assistant script inside the Virtual Assistant directory.<br>
 Communicate with the script by clearly speaking with the machine.
 
 #### Current functionality:
