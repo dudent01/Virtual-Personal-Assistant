@@ -252,7 +252,10 @@ def process_text(input):
                 if reg_ex:
                     topic = reg_ex.group(1)
                     ny = wikipedia.page(topic)
-                    assistant_speaks(str(ny.content[:1000].encode('utf-8')))
+                    end_char = 1000
+                    while(ny.content[end_char] != '.'):
+                        end_char += 1
+                    assistant_speaks(ny.content[:end_char])
             except Exception as e:
                 assistant_speaks(e)
 
