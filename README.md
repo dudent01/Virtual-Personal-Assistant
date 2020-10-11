@@ -20,7 +20,7 @@ Gracefully handles the case of '**open APPLICATION_THAT_IS_NOT_SUPPORTED**'.
    
 4. If told to '**open (website name without the https://www.)**', the website is opened.
    
-5. If told '**current weather in CITY**', it will report the current weather, as well as the maximum and minimum temperatures in celcius, in that city.
+5. If told '**current weather in CITY**' or '**weather in CITY**', it will report the current weather, as well as the maximum and minimum temperatures in celcius, in that city.
 Handles the case when the prompted location is not a city.
    
 6. If told '**time**', it will report the current time on the user's system.
