@@ -27,7 +27,7 @@ Handles the case when the prompted location is not a city.
    
 7. If told '**hello**', the system will respond with the proper time of day (morning, afternoon, evening).
    
-8. If asked for '**news**' or '**news for today**', the headings of the top 15 news articles from Google's RSS feed are read.
+8. If asked for '**news**' or '**news for today**' or '**what's happening**', the headings of the top 15 news articles from Google's RSS feed are read.
    
 9. When asked to '**tell me about SOMETHING**', the first 1000 characters of the associated Wikipedia article are read (the last sentence is finished).
    
