@@ -233,7 +233,7 @@ def process_text(input):
             else:
                 assistant_speaks('Hello Sir. Good evening')
 
-        elif 'news for today' in input.lower() or 'news' in input.lower():
+        elif 'news for today' in input.lower() or 'news' in input.lower() or "what's happening" in input.lower():
             try:
                 news_url = "https://news.google.com/news/rss"
                 Client = urlopen(news_url)
@@ -242,7 +242,7 @@ def process_text(input):
                 soup_page = soup(xml_page, "xml")
                 news_list = soup_page.findAll("item")
                 for news in news_list[:15]:
-                    assistant_speaks(str(news.title.text.encode('utf-8')))
+                    assistant_speaks(str(news.title.text))
             except Exception as e:
                 print(e)
 
