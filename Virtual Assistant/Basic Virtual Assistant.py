@@ -151,8 +151,6 @@ def search_web(input):
         return
 
 
-wolframalpha_id = "WOLFRAMALPHA_APP_ID"             # Don't know it yet
-
 def process_text(input):
     try:
         if 'search' in input or 'play' in input:
@@ -269,7 +267,7 @@ def process_text(input):
                 return
 
         '''elif 'play me a song' in command:
-            path = 'C:/Users/Denis/Personal Projects/Virtual Personal Assistant'
+            path = 'PATH_TO_PROJECT'
             folder = path
             for the_file in os.listdir(folder):
                 file_path = os.path.join(folder, the_file)
